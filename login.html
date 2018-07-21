@@ -1,0 +1,30 @@
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div id="login" v-show="loginModel">
+      <p>请登录</p>
+      <input type="text" id="mobile" v-model="mobile" />
+      <input type="password" id="password" v-model="password" />
+      <button @click="login">登录</button>
+      <a href="#" @click="switchToSignUp">免费注册</a>
+    </div>
+    <div id="register" v-show="!loginModel">
+      <p>立即免费注册账号</p>
+      <input type="text" id="mobileForSignup" v-model="mobile" />
+      <input type="password" id="passwordForSignup" v-model="password" />
+      <input type="password" id="passwordForSignup2" v-model="passwordConfirm" />
+      <button @click="register">免费注册</button>
+      <a href="#" @click="switchToLogin">已有账号，去登录</a>
+    </div>
+    <p>{{ message }}</p>
+  </div>
+</body>
+
+<script src="js/login.js"></script>
+</html>

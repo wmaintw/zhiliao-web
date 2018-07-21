@@ -1,0 +1,22 @@
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <visitor
+        v-for="item in visitorsList"
+        :visitor="item"
+        :key="item.id">
+      </visitor>
+    </ul>
+  </div>
+</body>
+
+<script src="js/component/visitor.js"></script>
+<script src="js/visitor.js"></script>
+</html>
